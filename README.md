@@ -19,4 +19,4 @@ AquarHome(水瓶Home页)是一个强大可定制的个人Home页，其本身具�
 
 [Syncthing配置说明](./app/Syncthing.md "Syncthing配置说明")
 
-<!-- [增量备份组件配置说明](# "增量备份组件配置说明") -->
+[增量备份组件配置说明](./app/ArchivePhase.md  "增量备份组件配置说明")
