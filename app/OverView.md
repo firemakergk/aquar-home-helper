@@ -52,7 +52,7 @@ docker-compose up -d
 
 ### 源码方式
 
-如果你的环境不方便使用docker，或者你需要根据自己的需求修改AquarHome的代码，可以使用源码方式部署AquarHome。
+如果你的环境不方便使用docker，或者你需要根据自己的需求修改AquarHome的代码，可以使用源码方式部署AquarHome。但由于对mediasoup流媒体服务组件的集成，搭建环境较为繁琐，若你不是开发者则不建议以这种方式部署。
 
 1.由于集成了流媒体服务组件mediasoup，其安装过程中依赖python3环境、配套的pip工具以及gcc等C语言编译工具，再加上AquarHome本身需要的nodejs 14+环境，强烈建议在linux环境下安装，以下建议也按照linux环境给出，安装根据mediasoup的文档要求，AquarHome需要如下环境：
   1) nodejs version>=14及匹配版本的npm。 
@@ -60,6 +60,7 @@ docker-compose up -d
   3) GNU make
   4) gcc and g++ >= 4.9 或 clang (with C++11 support)
   5) 与第4项相对应的cc and c++ 命令
+  6) 中国大陆需要外网访问能力，否则安装mediasoup的脚本无法正常下载必需的组件。
 
 2.从github或码云上下载源码，如果你有git，可以直接使用git clone下载源码。此外也可以在页面上下载zip文件然后在服务器上解压。
 ```
@@ -102,7 +103,9 @@ AquarHome的开发理念是尽可能轻量化，所以采用了纯javascript的�
 │           ├── 03ac2910226dd17cbb436978d908d852.webp
 │           ├── 0550386419f81fa4c89eb499fa8431b8.webp
 │           ...
-│
+├── cert <====自定义ssl证书目录，若为空则采用系统内置证书，若需要自定义证书，则证书必须以aquarhome.key/crt命名，且采用pem格式。
+│   ├── aquarhome.crt
+│   └── aquarhome.key
 ├── db <====AquarHome的核心配置数据
 │   └── db.json
 ├── icon_img <====图标文件目录，包括上传的与自动抓取的图标
