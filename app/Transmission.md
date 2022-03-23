@@ -1,4 +1,4 @@
-## Transmission配置
+# Transmission配置
 
 Transmission是老牌BT下载工具，同时支持torrent和magnet，并且自带远程管理功能，对于DIY NAS场景非常适用。由于一些bt客户端可以篡改做种策略，所以如今的很多PT下载站对于bt下载工具会有限制，而Transmission,一直都是首选推荐工具之一。
 

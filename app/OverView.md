@@ -1,7 +1,7 @@
 # 系统介绍及整体配置
 
-AquarHome是一个强大可定制的个人Home页系统，其本身具备基础导航功能（如搜索框、导航链接）的同时还适配了多种NAS常用服务的API，集成了NextCloud、Docker、Syncthing、TrueNas等服务，可以在同一页面直接看到各个服务的核心数据与最新状态。
-AquarHome希望能够成为一个高度可定制且功能强大的个人操作台，使私有服务的运维与管理更具效率。
+AquarHome是一个强大可定制的个人Home页系统，其本身具备基础导航功能（如搜索框、导航链接）的同时还适配了多种NAS常用服务的API，集成了NextCloud、Docker、Syncthing、TrueNas等服务，可以在同一页面直接看到各个服务的核心数据与最新状态。系统还集成了流媒体服务能力，具有视频聊天功能。后续还会有更多流媒体功能上线。
+AquarHome希望能够成为一个高度可定制且功能强大的个人操作台，使家庭服务器的运维与管理更具效率。
 
 ## 快速开始
 
@@ -37,6 +37,7 @@ services:
       - /opt/aquar/storages/apps/aquarhome/logs:/root/.pm2/logs #日志文件
   ports:
       - 8172:8172
+      - 10000-10100:10000-10100 #视频聊天组件需要预留100个端口作为流媒体的数据通道
   restart: unless-stopped
 ```
 
@@ -47,20 +48,25 @@ cd aquarhome
 docker-compose up -d
 ```
 
-5.docker-compose正常启动后，访问宿主机在内网中的地址，如192.168.0.117:8172，如果可以看到AquarHome的登录页面，就说明部署成功了。
+5.docker-compose正常启动后，访问宿主机在内网中的地址，如https://192.168.0.117:8172，注意是HTTPS协议，如果部署成功，第一次打开页面时浏览器会报告SSL证书不安全，原因是AquarHome内置了默认的自签名证书，点击“继续前往”如果可以看到AquarHome的登录页面就可以开始设置属于自己的AquarHome了。
 
 ### 源码方式
 
 如果你的环境不方便使用docker，或者你需要根据自己的需求修改AquarHome的代码，可以使用源码方式部署AquarHome。
 
-0.首先需要确保环境上安装有nodejs 14+版本，node安装不是本文重点，请参考其他资料安装确认。
+1.由于集成了流媒体服务组件mediasoup，其安装过程中依赖python3环境、配套的pip工具以及gcc等C语言编译工具，再加上AquarHome本身需要的nodejs 14+环境，强烈建议在linux环境下安装，以下建议也按照linux环境给出，安装根据mediasoup的文档要求，AquarHome需要如下环境：
+  1) nodejs version>=14及匹配版本的npm。 
+  2) python version>=3.6及匹配版本的pip命令。
+  3) GNU make
+  4) gcc and g++ >= 4.9 或 clang (with C++11 support)
+  5) 与第4项相对应的cc and c++ 命令
 
-1.从github或码云上下载源码，如果你有git，可以直接使用git clone下载源码。此外也可以在页面上下载zip文件然后在服务器上解压。
+2.从github或码云上下载源码，如果你有git，可以直接使用git clone下载源码。此外也可以在页面上下载zip文件然后在服务器上解压。
 ```
 git clone https://gitee.com/firemaker/aquar-home.git
 ```
 
-2.进入到项目目录下，执行如下语句。脚本每一步都有解释，你可以根据自己的情况自行增减。
+3.进入到项目目录下，执行如下语句。脚本每一步都有解释，你可以根据自己的情况自行增减。
 
 ``` bash
 sudo -i # 以管理员身份进行操作

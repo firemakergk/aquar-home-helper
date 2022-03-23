@@ -1,4 +1,4 @@
-## Syncthing配置
+# Syncthing配置
 
 Syncthing是点对点的文件同步服务，支持非ios的其他所有设备。本文档内容聚焦于如何在AquarHome中配置有的服务，所以本文假定你已经有了一个正常运行的Syncthing服务。
 
