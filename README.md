@@ -48,6 +48,8 @@ AquarHome的核心特性：
 
 [图标链接配置说明](./app/Icon.md "图标链接配置说明")
 
+[PVE配置说明](./app/Pve.md "PVE配置说明")
+
 [Docker配置说明](./app/Docker.md "Docker配置说明")
 
 [NextCloud配置说明](./app/NextCloud.md "NextCloud配置说明")

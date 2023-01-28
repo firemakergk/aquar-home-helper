@@ -28,8 +28,8 @@ Aquar目前接入的TrueNas为TrueNas core版本，其他版本未做过测试�
 
 6.在配置页面上的链接地址、server、api_key项中分别填写TrueNas的公网地址（如果有的话，没有就填内网地址），内网地址，以及刚才保存下来的API Key.
 
-![](../images/truenas/chrome_XL1f5jiEld.png)
+![](../images/truenas/chrome_hMpqItIfkW.png)
 
 7.点击确认后组件在页面上生成，可以看到存储池信息已经被正确获取。
 
-![](../images/truenas/chrome_aWBO2AUQbT.png)
+![](../images/truenas/chrome_XiEFauhuGc.png)

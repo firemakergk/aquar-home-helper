@@ -12,9 +12,9 @@
 
 1.在AquarHome中点击右上角的齿轮标志进入设置页面，点选左侧“添加组件”菜单，选择“文件增量归档”功能，在参数设置页面不需要设置什么参数，直接点击确定。
 
-![](../images/archivephase/chrome_AgEs95j3oa.png)
+![](../images/archivephase/chrome_4oOyRRhh9u.png)
 
-![](../images/archivephase/chrome_wkLRAx7cWy.png)
+![](../images/archivephase/chrome_ukuoxXoTzl.png)
 
 2.点击确认后组件在页面上生成，点击左上角的“+”号按钮，添加一个新的同步任务。在表单中填入需要归档的源文件夹，保存归档数据的目标文件夹以及归档文件的名称（若不填写系统会以日期作为每次归档的名称如20211205）。  
 这个表单有这几处需要注意：  

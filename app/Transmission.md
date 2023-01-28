@@ -18,16 +18,12 @@ Transmission是老牌BT下载工具，同时支持torrent和magnet，并且自�
 **server**是AquarHome调用transmission远程控制接口的接口地址，这个地址与web端地址在同一个接口上，所以我可以输入`http://与链接地址相同的ip:及端口号/transmission/rpc`来连接服务器，但是由于AquarHome与Transmission服务在同一个局域网内（具体到我的例子中，是在同一个docker虚拟网络内），没有必要让请求进入公网中，所以我可以直接填写transmission服务的host名称及其暴露在内网中的端口来完成这个配置。你需要根据自己的情况来填写正确的地址。  
 **用户名及密码**是第1步中设置的用户名及密码信息。由于Transmission的安全机制较弱，所以出于安全考虑，AquarHome将用户名和密码加密后存储在token中，在组件的设置页面你会看到这个token的信息。
 
-![](../images/transmission/chrome_1q1gJjcCHr.png)
+![](../images/transmission/chrome_s1BvXg3j6m.png)
 
-![](../images/transmission/chrome_q5DpCkhL47.png)
+![](../images/transmission/chrome_nbDlalA9OO.png)
 
-![](../images/transmission/chrome_D5cAsBRHzQ.png)
+![](../images/transmission/chrome_0duQKlR2db.png)
 
 3.填写好信息后点击确认，就可以看到组件在页面上生成，如果配置信息正确，就已经可以看到transmission中的任务了。你可以在组件中启停、删除任务，也可以用torrent或者magnet添加新任务，这些操作比较符合直觉，本篇说明中就不在赘述了。
 
-![](../images/transmission/chrome_zWaCNLCp7t.png)
-
-![](../images/transmission/chrome_AxQlddu1AO.png)
-
-![](../images/transmission/chrome_Rhm5r0j5fX.png)
+![](../images/transmission/chrome_GuyVnTSO0T.png)

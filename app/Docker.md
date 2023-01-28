@@ -22,12 +22,12 @@ ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375 --containerd=/run/cont
 
 1.点击AquarHome右上角的齿轮标志进入设置页面，点选左侧“添加组件”菜单，选择Docker，点击进入参数设置页面。
 
-![](../images/docker/chrome_UFvrnWPpeR.png)
+![](../images/docker/chrome_baFP0EHqBk.png)
 
 2.将docker宿主机的内网ip填入server表单项中，例如我的docker宿主机地址为192.168.0.117，配置如下图所示
 
-![](../images/docker/chrome_PsqF74eIOm.png)
+![](../images/docker/chrome_fYw2IkPZJX.png)
 
 3.点击确定后可以看到，组件已经拉取到了docker容器运行的信息。
 
-![](../images/docker/chrome_Dr4BMvXiuz.png)
+![](../images/docker/chrome_0i4BkzCIES.png)

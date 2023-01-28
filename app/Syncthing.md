@@ -15,7 +15,7 @@ Syncthing是点对点的文件同步服务，支持非ios的其他所有设备�
 
 根据上述的叙述，选择正确的地址，填入设置表单的“Server”栏中。下图中链接地址栏中填的是服务器的内网地址，这个地址可以在家里的其他机器访问到。而Server栏中填的是docker compose network自动分配的虚拟内网的host名称，这个名称在docker容器内部等价于docker network 的虚拟内网地址，在我的例子中就是172.18.0.2，这个内网地址可以通过docker network命令查询出来，当然也可以填写主机在家庭局域网中的ip地址，即上图中的http://192.168.0.117:8384。
 
-![](../images/syncthing/chrome_BN0D72Q3Bz.png)
+![](../images/syncthing/chrome_xl6jIcDFLC.png)
 
 3.回到Syncthing页面，点击右上方的“操作”按钮，在下拉菜单中点击“设置”，在设置页面的右侧会看到一栏叫API Key，将这个key值复制下来，粘贴到组件配置表单的app_key输入框中。
 
@@ -25,4 +25,4 @@ Syncthing是点对点的文件同步服务，支持非ios的其他所有设备�
 
 4.点击确定，刷新页面即可看到组件成功拉取到了数据。
 
-![](../images/syncthing/chrome_wVv43WGsEP.png)
+![](../images/syncthing/chrome_MRTxhNym5n.png)
